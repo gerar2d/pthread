@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
             }
         }
     }
-    for (i =0; i < MAX_T; i++)
+    for (i = 0; i < MAX_T; i++)
     {
         if (pthread_join(t[i], NULL) != 0)
         {
@@ -92,6 +92,7 @@ void *consumer(void *args)
         pthread_mutex_unlock(&mutexBuffer);
 
     }
+    
     if (countLimit > bufferSize)
     {
         printf("Buffer is full\n");
